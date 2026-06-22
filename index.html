@@ -1,209 +1,188 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aadish Mahida</title>
-    <style>
-        /* Global Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
 
-        /* Hero Section */
-        .hero {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: center;
-            padding: 20px;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        /* Timeline Section (What's Coming) */
-        .timeline-container {
-            <section class="content-section">
-    <h2>About Me</h2>
-    <p>
-        Hi! My name is Aadish Mahida, and I am currently a student with a passion for learning,
-        exploring new opportunities, and challenging myself both inside and outside the classroom.
-        Whether I'm working on school projects, participating in activities, or pursuing my hobbies,
-        I enjoy finding ways to grow and develop new skills.
-    </p>
-</section>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+    }
 
-<!-- Activities & Experiences -->
-<section class="content-section">
-    <h2>Activities & Experiences</h2>
-    <ul>
-        <li>Student at [School Name]</li>
-        <li>Member of [Club or Organization]</li>
-        <li>Participant in [Sport or Activity]</li>
-        <li>Volunteer Experience</li>
-        <li>Academic Projects and Achievements</li>
-        <li>Leadership and Teamwork Opportunities</li>
-    </ul>
-</section>
+    header {
+        background-color: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+    }
 
-<!-- Interests -->
-<section class="content-section">
-    <h2>Interests</h2>
-    <ul>
-        <li>Technology and Computers</li>
-        <li>Science and Mathematics</li>
-        <li>Sports and Fitness</li>
-        <li>Reading and Learning New Skills</li>
-        <li>Creative Projects</li>
-        <li>Community Involvement</li>
-    </ul>
-</section>
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
 
-<!-- Future Goals -->
-<section class="content-section">
-    <h2>Goals for the Future</h2>
-    <p>
-        I am currently exploring different career paths and interests while continuing
-        to strengthen my academic foundation. My goal is to work hard, stay curious,
-        and take advantage of opportunities that help me learn, grow, and make a
-        positive impact on others.
-    </p>
-</section>
+    header p {
+        font-size: 1.2rem;
+        color: #cccccc;
+    }
 
-<!-- Contact -->
-<section class="content-section">
-    <h2>Contact</h2>
-    <p>
-        Thank you for visiting my website! More projects, experiences, and accomplishments
-        will be added as I continue my journey.
-    </p>
-</section>
-        }
-        .timeline-container h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 1.8rem;
-            color: #444;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        /* Vertical Line */
-        .timeline-container::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: #1a1a1a;
-            top: 100px;
-            bottom: 0;
-            left: 30px;
-        }
-        /* Timeline Item */
-        .timeline-item {
-            padding: 20px 30px;
-            position: relative;
-            background-color: #fff;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            margin-left: 60px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        /* Timeline Dots */
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            left: -36px;
-            background-color: #fff;
-            border: 4px solid #ff4757;
-            border-radius: 50%;
-            top: 25px;
-            z-index: 1;
-        }
-        .timeline-date {
-            font-size: 0.9rem;
-            color: #ff4757;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .timeline-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        .timeline-desc {
-            font-size: 0.95rem;
-            color: #666;
-        }
-    </style>
+    .hero {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 5px solid white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .section {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+        margin-bottom: 15px;
+        color: #222;
+        border-bottom: 2px solid #eeeeee;
+        padding-bottom: 10px;
+    }
+
+    .section ul {
+        margin-left: 20px;
+    }
+
+    .section li {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #666;
+    }
+</style>
+```
+
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        aadishmahida.com
-    </header>
+<header>
+    <h1>Aadish Mahida</h1>
+    <p>Student Portfolio</p>
+</header>
 
-    <!-- Main Hero Section -->
-    <section class="hero">
-        <!-- Replace 'your-photo.jpg' with your actual image file name -->
-        <img src="your-photo.jpg" alt="Aadish Mahida" class="profile-photo">
-        <h1>Welcome to My Website</h1>
-    </section>
+<section class="hero">
+    <img src="https://via.placeholder.com/200" alt="Aadish Mahida" class="profile-photo">
 
-    <!-- What's Coming Section -->
-    <section class="timeline-container">
-        <h2>What's Coming Next</h2>
+```
+<p>
+    Welcome to my personal portfolio website. Here you can learn more
+    about my interests, activities, experiences, and goals for the future.
+</p>
+```
 
-        <!-- Item 1 -->
-        <div class="timeline-item">
-            <div class="timeline-date">Coming July 2026</div>
-            <div class="timeline-title">New Portfolio Launch</div>
-            <div class="timeline-desc">Showcasing recent photography and web development projects.</div>
-        </div>
+</section>
 
-        <!-- Item 2 -->
-        <div class="timeline-item">
-            <div class="timeline-date">Coming September 2026</div>
-            <div class="timeline-title">Personal Blog Setup</div>
-            <div class="timeline-desc">Sharing regular updates, tutorials, and tech industry insights.</div>
-        </div>
+<section class="section">
+    <h2>About Me</h2>
 
-        <!-- Item 3 -->
-        <div class="timeline-item">
-            <div class="timeline-date">Coming Winter 2026</div>
-            <div class="timeline-title">YouTube Channel Release</div>
-            <div class="timeline-desc">Video guides covering design layouts, coding, and workflow tips.</div>
-        </div>
-    </section>
+```
+<p>
+    Hi! My name is Aadish Mahida. I am a student who enjoys learning new things,
+    exploring different interests, and challenging myself both inside and outside
+    of school. Whether I am participating in activities, working on projects,
+    or spending time with friends and family, I always try to learn and grow
+    from every experience.
+</p>
+```
+
+</section>
+
+<section class="section">
+    <h2>Activities & Experiences</h2>
+
+```
+<ul>
+    <li>Student and lifelong learner</li>
+    <li>Participation in school activities and clubs</li>
+    <li>Community involvement and volunteering</li>
+    <li>Academic projects and achievements</li>
+    <li>Leadership and teamwork experiences</li>
+    <li>Exploring new skills and opportunities</li>
+</ul>
+```
+
+</section>
+
+<section class="section">
+    <h2>Interests</h2>
+
+```
+<ul>
+    <li>Technology and innovation</li>
+    <li>Science and mathematics</li>
+    <li>Sports and fitness</li>
+    <li>Reading and learning</li>
+    <li>Creative projects</li>
+    <li>Problem solving and critical thinking</li>
+</ul>
+```
+
+</section>
+
+<section class="section">
+    <h2>Goals for the Future</h2>
+
+```
+<p>
+    I am continuing to explore different academic subjects and career paths
+    while building skills that will help me succeed in the future. My goal
+    is to stay curious, work hard, and take advantage of opportunities that
+    help me learn, grow, and make a positive impact.
+</p>
+```
+
+</section>
+
+<section class="section">
+    <h2>Contact</h2>
+
+```
+<p>
+    Thank you for visiting my website. More projects, experiences,
+    and accomplishments will be added as I continue my journey.
+</p>
+```
+
+</section>
+
+<footer>
+    © 2026 Aadish Mahida
+</footer>
 
 </body>
 </html>
+
