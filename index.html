@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadish Mahida</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Timeline Section (What's Coming) */
+        .timeline-container {
+            max-width: 600px;
+            margin: 60px auto;
+            position: relative;
+            padding: 0 20px;
+        }
+        .timeline-container h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        /* Vertical Line */
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #1a1a1a;
+            top: 100px;
+            bottom: 0;
+            left: 30px;
+        }
+        /* Timeline Item */
+        .timeline-item {
+            padding: 20px 30px;
+            position: relative;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin-left: 60px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        /* Timeline Dots */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: -36px;
+            background-color: #fff;
+            border: 4px solid #ff4757;
+            border-radius: 50%;
+            top: 25px;
+            z-index: 1;
+        }
+        .timeline-date {
+            font-size: 0.9rem;
+            color: #ff4757;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        aadishmahida.com
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="hero">
+        <!-- Replace 'your-photo.jpg' with your actual image file name -->
+        <img src="your-photo.jpg" alt="Aadish Mahida" class="profile-photo">
+        <h1>Welcome to My Website</h1>
+    </section>
+
+    <!-- What's Coming Section -->
+    <section class="timeline-container">
+        <h2>What's Coming Next</h2>
+
+        <!-- Item 1 -->
+        <div class="timeline-item">
+            <div class="timeline-date">Coming July 2026</div>
+            <div class="timeline-title">New Portfolio Launch</div>
+            <div class="timeline-desc">Showcasing recent photography and web development projects.</div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item">
+            <div class="timeline-date">Coming September 2026</div>
+            <div class="timeline-title">Personal Blog Setup</div>
+            <div class="timeline-desc">Sharing regular updates, tutorials, and tech industry insights.</div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item">
+            <div class="timeline-date">Coming Winter 2026</div>
+            <div class="timeline-title">YouTube Channel Release</div>
+            <div class="timeline-desc">Video guides covering design layouts, coding, and workflow tips.</div>
+        </div>
+    </section>
+
+</body>
+</html>
