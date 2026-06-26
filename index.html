@@ -1,177 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadish Mahida</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aadish Mahida | Portfolio</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f6f8fb;
-            color: #222;
-            line-height: 1.6;
-        }
+<style>
 
-        header {
-            background: linear-gradient(90deg, #0f4c81 0%, #2b3a50 100%);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+}
 
-        .top-banner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #eceff4;
-            color: #0f4c81;
-            padding: 10px 20px;
-            font-weight: bold;
-            text-align: left;
-        }
+body{
+background:#f6f8fb;
+color:#222;
+}
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+/* ================= HOME SCREEN ================= */
 
-        header p {
-            font-size: 1.2rem;
-            color: #dce4ef;
-        }
+#homeScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:linear-gradient(135deg,#0f4c81,#1e3a8a,#2563eb);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+z-index:9999;
+padding:30px;
+}
 
-        .hero {
-            text-align: center;
-            padding: 120px 20px 60px;
-        }
+.logo{
+width:160px;
+height:160px;
+border-radius:50%;
+background:white;
+color:#0f4c81;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
+font-weight:bold;
+margin-bottom:25px;
+box-shadow:0 10px 35px rgba(0,0,0,.35);
+animation:float 3s infinite ease-in-out;
+}
 
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
 
-        .section {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
+#homeScreen h1{
+font-size:60px;
+margin-bottom:15px;
+}
 
-        .section h2 {
-            margin-bottom: 15px;
-            color: #0f4c81;
-            border-bottom: 2px solid #e3e8ef;
-            padding-bottom: 10px;
-        }
+#homeScreen p{
+font-size:22px;
+max-width:750px;
+margin-bottom:30px;
+line-height:1.7;
+}
 
-        .section ul {
-            margin-left: 20px;
-            list-style: disc inside;
-        }
+#exploreBtn{
+padding:18px 45px;
+font-size:22px;
+background:white;
+color:#0f4c81;
+border:none;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+font-weight:bold;
+}
 
-        .section li {
-            margin-bottom: 10px;
-        }
+#exploreBtn:hover{
+transform:scale(1.08);
+}
 
-        .contact-links a {
-            color: #0f4c81;
-            text-decoration: none;
-        }
+.topicGrid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(3,230px);
+gap:20px;
+}
 
-        .contact-links a:hover {
-            text-decoration: underline;
-        }
+.topicGrid a{
+background:rgba(255,255,255,.15);
+padding:20px;
+border-radius:15px;
+color:white;
+text-decoration:none;
+font-size:20px;
+transition:.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #666;
-        }
-    </style>
+.topicGrid a:hover{
+background:white;
+color:#0f4c81;
+transform:translateY(-8px);
+}
+
+#portfolio{
+display:none;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* ================= EXISTING WEBSITE ================= */
+
+header{
+background:linear-gradient(90deg,#0f4c81,#2b3a50);
+color:white;
+text-align:center;
+padding:40px 20px;
+position:relative;
+}
+
+.top-banner{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+background:#eceff4;
+color:#0f4c81;
+padding:10px 20px;
+font-weight:bold;
+text-align:left;
+}
+
+header h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+header p{
+font-size:1.2rem;
+color:#dce4ef;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px 60px;
+}
+
+.profile-photo{
+width:200px;
+height:200px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+margin-bottom:20px;
+}
+
+.section{
+max-width:900px;
+margin:30px auto;
+background:white;
+padding:30px;
+border-radius:14px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.section h2{
+color:#0f4c81;
+margin-bottom:15px;
+border-bottom:2px solid #e3e8ef;
+padding-bottom:10px;
+}
+
+.section ul{
+margin-left:20px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#666;
+}
+
+@media(max-width:900px){
+
+.topicGrid{
+grid-template-columns:repeat(2,200px);
+}
+
+#homeScreen h1{
+font-size:45px;
+}
+
+#homeScreen p{
+font-size:18px;
+}
+
+}
+
+@media(max-width:600px){
+
+.topicGrid{
+grid-template-columns:1fr;
+width:90%;
+}
+
+.logo{
+width:120px;
+height:120px;
+font-size:45px;
+}
+
+}
+
+</style>
+
+<script>
+
+function enterSite(){
+
+document.getElementById("homeScreen").style.display="none";
+document.getElementById("portfolio").style.display="block";
+
+}
+
+</script>
+
 </head>
+
 <body>
-    <div class="top-banner">Welcome to my portfolio — learn about my projects, goals, and ideas.</div>
-    <header>
-        <h1>Aadish Mahida</h1>
-        <p>Student Portfolio</p>
-    </header>
 
-    <section class="hero">
-        <img src="AM.jpg" class="profile-photo">
-        <p>Welcome to my personal portfolio website. Here you can learn more about my interests, activities, experiences, and goals for the future.</p>
-    </section>
+<div id="homeScreen">
 
-    <section class="section">
-        <h2>About Me</h2>
-        <p>Hi! My name is Aadish Mahida. I am a student who enjoys learning new things, exploring different interests, and challenging myself both inside and outside of school. I am currently a 2nd grader at Woodmont Elementary School in Montville, NJ. I like making games, arts and crafts, and learning about law. When I grow up, I want to become a lawyer who understands the law deeply and helps people with confidence.</p>
-    </section>
+<div class="logo">AM</div>
 
-    <section class="section">
-        <h2>Activities & Experiences</h2>
-        <ul>
-            <li>Swimming at British Swim School Fairfield NJ in Shark 1</li>
-            <li>Student and lifelong learner</li>
-            <li>Participation in school activities and clubs</li>
-            <li>Community involvement and volunteering</li>
-            <li>Academic projects and achievements</li>
-            <li>Leadership and teamwork experiences</li>
-            <li>Exploring new skills and opportunities</li>
-        </ul>
-    </section>
+<h1>Aadish Mahida</h1>
 
-    <section class="section">
-        <h2>Interests</h2>
-        <ul>
-            <li>Law and problem solving</li>
-            <li>Technology and innovation</li>
-            <li>Science and mathematics</li>
-            <li>Sports and fitness</li>
-            <li>Reading and learning</li>
-            <li>Creative projects</li>
-            <li>Critical thinking</li>
-        </ul>
-    </section>
+<p>
+Welcome to my personal portfolio.
+Explore my projects, activities, interests,
+future goals, achievements and games.
+</p>
 
-    <section class="section">
-        <h2>Goals for the Future</h2>
-        <p>I am continuing to explore different academic subjects and career paths while building skills that will help me succeed in the future. My goal is to stay curious, work hard, and take advantage of opportunities that help me learn, grow, and make a positive impact. I plan to apply to AMC Academy of Math, Science, and Engineering, and my dream college is Princeton.</p>
-    </section>
+<button id="exploreBtn" onclick="enterSite()">
+Explore Portfolio
+</button>
 
-    <section class="section">
-        <h2>Contact & Games</h2>
-        <p>I enjoy talking to people who are interested in law or who have questions about careers and learning. Contact me at <a class="contact-links" href="mailto:aadish.mahida@gmail.com">aadish.mahida@gmail.com</a>.</p>
-        <p>Games that I have made:</p>
-        <ul>
-            <li><a href="https://aadishgames21.base44.app" target="_blank">aadishgames21.base44.app</a></li>
-            <li><a href="https://earth-explorers.base44.app" target="_blank">earth-explorers.base44.app</a></li>
-            <li><a href="https://service-desk.base44.app" target="_blank">service-desk.base44.app</a></li>
-            <li><a href="https://space-run.base44.app" target="_blank">space-run.base44.app</a></li>
-            <li><a href="https://code-cracker-circuit1.base44.app" target="_blank">code-cracker-circuit1.base44.app</a></li>
-            <li><a href="https://slow-flow1.base44.app" target="_blank">slow-flow.base44.app</a> (yoga for weekend)</li>
-            <li><a href="https://map-conquest.base44.app" target="_blank">map-conquest.base44.app</a> (login required)</li>
-            <li><a href="https://rock-learn.base44.app" target="_blank">rock-learn.base44.app</a></li>
-            <li><a href="https://rocket-math-mission.base44.app" target="_blank">rocket-math-mission.base44.app</a></li>
-        </ul>
-        <p>Thank you for visiting my website. More projects, experiences, and accomplishments will be added as I continue my journey.</p>
-    </section>
+<div class="topicGrid">
 
-    <footer>
-        © 2026 Aadish Mahida
-    </footer>
-</body>
-</html>
+<a href="#about" onclick="enterSite()">👤 About Me</a>
+
+<a href="#activities" onclick="enterSite()">🌟 Activities</a>
+
+<a href="#interests" onclick="enterSite()">❤️ Interests</a>
+
+<a href="#goals" onclick="enterSite()">🎯 Goals</a>
+
+<a href="#contact" onclick="enterSite()">📧 Contact</a>
+
+<a href="#games" onclick="enterSite()">🎮 Games</a>
+
+</div>
+
+</div>
+
+<div id="portfolio">
+
+<div class="top-banner">
+Welcome to my portfolio — learn about my projects, goals, and ideas.
+</div>
+
+<header>
+
+<h1>Aadish Mahida</h1>
+
+<p>Student Portfolio</p>
+
+</header>
+
+<section class="hero">
+
+<img src="AM.jpg" class="profile-photo">
+
+<p>
+Welcome to my personal portfolio website.
+Here you can learn more about my interests,
+activities, experiences, and goals for the future.
+</p>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>About Me</h2>
+
+<p>
+Hi! My name is Aadish Mahida...
+        
