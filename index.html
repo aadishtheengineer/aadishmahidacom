@@ -3,277 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aadish Mahida | Portfolio</title>
+<title>Aadish Mahida</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#f6f8fb;
-color:#222;
+    font-family:Arial,sans-serif;
+    background:#f6f8fb;
+    color:#222;
+    line-height:1.6;
 }
 
-/* ================= HOME SCREEN ================= */
+/* ---------- HOME SCREEN ---------- */
 
 #homeScreen{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:linear-gradient(135deg,#0f4c81,#1e3a8a,#2563eb);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-z-index:9999;
-padding:30px;
-}
-
-.logo{
-width:160px;
-height:160px;
-border-radius:50%;
-background:white;
-color:#0f4c81;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:60px;
-font-weight:bold;
-margin-bottom:25px;
-box-shadow:0 10px 35px rgba(0,0,0,.35);
-animation:float 3s infinite ease-in-out;
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#0f4c81,#2b3a50);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    z-index:9999;
+    padding:30px;
 }
 
 #homeScreen h1{
-font-size:60px;
-margin-bottom:15px;
+    font-size:60px;
+    margin-bottom:20px;
 }
 
 #homeScreen p{
-font-size:22px;
-max-width:750px;
-margin-bottom:30px;
-line-height:1.7;
+    max-width:650px;
+    font-size:22px;
+    margin-bottom:35px;
 }
 
-#exploreBtn{
-padding:18px 45px;
-font-size:22px;
-background:white;
-color:#0f4c81;
-border:none;
-border-radius:12px;
-cursor:pointer;
-transition:.3s;
-font-weight:bold;
-}
-
-#exploreBtn:hover{
-transform:scale(1.08);
-}
-
-.topicGrid{
-margin-top:40px;
-display:grid;
-grid-template-columns:repeat(3,230px);
-gap:20px;
-}
-
-.topicGrid a{
-background:rgba(255,255,255,.15);
-padding:20px;
-border-radius:15px;
-color:white;
-text-decoration:none;
-font-size:20px;
-transition:.3s;
-}
-
-.topicGrid a:hover{
-background:white;
-color:#0f4c81;
-transform:translateY(-8px);
+#homeScreen button{
+    padding:18px 40px;
+    font-size:22px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:#0f4c81;
+    font-weight:bold;
 }
 
 #portfolio{
-display:none;
-animation:fade 1s;
+    display:none;
 }
 
-@keyframes fade{
-from{opacity:0;}
-to{opacity:1;}
-}
-
-/* ================= EXISTING WEBSITE ================= */
+/* ---------- ORIGINAL WEBSITE ---------- */
 
 header{
-background:linear-gradient(90deg,#0f4c81,#2b3a50);
-color:white;
-text-align:center;
-padding:40px 20px;
-position:relative;
+    background:linear-gradient(90deg,#0f4c81,#2b3a50);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
 }
 
 .top-banner{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-background:#eceff4;
-color:#0f4c81;
-padding:10px 20px;
-font-weight:bold;
-text-align:left;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background:#eceff4;
+    color:#0f4c81;
+    padding:10px 20px;
+    font-weight:bold;
+    text-align:left;
 }
 
 header h1{
-font-size:3rem;
-margin-bottom:10px;
+    font-size:3rem;
 }
 
 header p{
-font-size:1.2rem;
-color:#dce4ef;
+    color:#dce4ef;
 }
 
 .hero{
-text-align:center;
-padding:120px 20px 60px;
+    text-align:center;
+    padding:120px 20px 60px;
 }
 
 .profile-photo{
-width:200px;
-height:200px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid white;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
-margin-bottom:20px;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
 }
 
 .section{
-max-width:900px;
-margin:30px auto;
-background:white;
-padding:30px;
-border-radius:14px;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 .section h2{
-color:#0f4c81;
-margin-bottom:15px;
-border-bottom:2px solid #e3e8ef;
-padding-bottom:10px;
-}
-
-.section ul{
-margin-left:20px;
+    color:#0f4c81;
+    margin-bottom:15px;
 }
 
 footer{
-text-align:center;
-padding:30px;
-color:#666;
+    text-align:center;
+    padding:30px;
 }
-
-@media(max-width:900px){
-
-.topicGrid{
-grid-template-columns:repeat(2,200px);
-}
-
-#homeScreen h1{
-font-size:45px;
-}
-
-#homeScreen p{
-font-size:18px;
-}
-
-}
-
-@media(max-width:600px){
-
-.topicGrid{
-grid-template-columns:1fr;
-width:90%;
-}
-
-.logo{
-width:120px;
-height:120px;
-font-size:45px;
-}
-
-}
-
 </style>
-
-<script>
-
-function enterSite(){
-
-document.getElementById("homeScreen").style.display="none";
-document.getElementById("portfolio").style.display="block";
-
-}
-
-</script>
-
 </head>
 
 <body>
 
 <div id="homeScreen">
 
-<div class="logo">AM</div>
-
 <h1>Aadish Mahida</h1>
 
 <p>
-Welcome to my personal portfolio.
-Explore my projects, activities, interests,
-future goals, achievements and games.
+Welcome to my personal portfolio website.
+Click below to explore my projects,
+interests, activities, goals, and games.
 </p>
 
-<button id="exploreBtn" onclick="enterSite()">
+<button onclick="enterSite()">
 Explore Portfolio
 </button>
-
-<div class="topicGrid">
-
-<a href="#about" onclick="enterSite()">👤 About Me</a>
-
-<a href="#activities" onclick="enterSite()">🌟 Activities</a>
-
-<a href="#interests" onclick="enterSite()">❤️ Interests</a>
-
-<a href="#goals" onclick="enterSite()">🎯 Goals</a>
-
-<a href="#contact" onclick="enterSite()">📧 Contact</a>
-
-<a href="#games" onclick="enterSite()">🎮 Games</a>
-
-</div>
 
 </div>
 
@@ -284,29 +153,84 @@ Welcome to my portfolio — learn about my projects, goals, and ideas.
 </div>
 
 <header>
-
 <h1>Aadish Mahida</h1>
-
 <p>Student Portfolio</p>
-
 </header>
 
 <section class="hero">
-
 <img src="AM.jpg" class="profile-photo">
-
 <p>
-Welcome to my personal portfolio website.
-Here you can learn more about my interests,
-activities, experiences, and goals for the future.
+Welcome to my personal portfolio website. Here you can learn more about my interests, activities, experiences, and goals for the future.
 </p>
+</section>
+
+<section class="section">
+<h2>About Me</h2>
+<p>
+Hi! My name is Aadish Mahida. I am a student who enjoys learning new things, exploring different interests, and challenging myself both inside and outside of school.
+</p>
+</section>
+
+<section class="section">
+<h2>Activities & Experiences</h2>
+<ul>
+<li>Swimming at British Swim School Fairfield NJ</li>
+<li>Student and lifelong learner</li>
+<li>Participation in school activities</li>
+<li>Community involvement</li>
+<li>Academic achievements</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Interests</h2>
+<ul>
+<li>Law</li>
+<li>Technology</li>
+<li>Science</li>
+<li>Sports</li>
+<li>Reading</li>
+<li>Creative Projects</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Goals</h2>
+<p>
+My goal is to become a lawyer, continue learning, and attend Princeton University.
+</p>
+</section>
+
+<section class="section">
+<h2>Contact & Games</h2>
+
+<p>Email:
+<a href="mailto:aadish.mahida@gmail.com">
+aadish.mahida@gmail.com
+</a>
+</p>
+
+<ul>
+<li><a href="https://aadishgames21.base44.app" target="_blank">Aadish Games</a></li>
+<li><a href="https://earth-explorers.base44.app" target="_blank">Earth Explorers</a></li>
+<li><a href="https://service-desk.base44.app" target="_blank">Service Desk</a></li>
+<li><a href="https://space-run.base44.app" target="_blank">Space Run</a></li>
+</ul>
 
 </section>
 
-<section class="section" id="about">
+<footer>
+© 2026 Aadish Mahida
+</footer>
 
-<h2>About Me</h2>
+</div>
 
-<p>
-Hi! My name is Aadish Mahida...
-        
+<script>
+function enterSite(){
+    document.getElementById("homeScreen").style.display="none";
+    document.getElementById("portfolio").style.display="block";
+}
+</script>
+
+</body>
+</html>
