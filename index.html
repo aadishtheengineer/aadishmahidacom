@@ -54,6 +54,7 @@
         sans-serif;
 
       color: var(--text);
+
       background:
         radial-gradient(circle at 10% 5%, rgba(104, 200, 255, 0.20), transparent 28%),
         radial-gradient(circle at 90% 15%, rgba(22, 119, 255, 0.10), transparent 25%),
@@ -228,6 +229,7 @@
       border-radius: 10px;
 
       color: white;
+
       background: linear-gradient(
         135deg,
         #42caff,
@@ -276,7 +278,6 @@
       padding: 10px 15px !important;
 
       color: white !important;
-
       background: #102033 !important;
 
       border-radius: 11px !important;
@@ -287,6 +288,55 @@
     .nav-contact:hover {
       background: var(--blue) !important;
       transform: translateY(-2px);
+    }
+
+    /* ------------------------------
+       LANGUAGE SWITCHER
+    ------------------------------ */
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+
+      margin-left: 5px;
+      padding: 3px;
+
+      border: 1px solid var(--border);
+      border-radius: 11px;
+
+      background: #f4f9fd;
+    }
+
+    .language-button {
+      border: none;
+      border-radius: 8px;
+
+      padding: 7px 9px;
+
+      background: transparent;
+
+      color: #718397;
+
+      font-size: 10px;
+      font-weight: 900;
+
+      cursor: pointer;
+
+      transition: 0.25s ease;
+    }
+
+    .language-button:hover {
+      color: var(--blue);
+      background: white;
+    }
+
+    .language-button.active {
+      color: white;
+      background: var(--blue);
+
+      box-shadow:
+        0 4px 12px rgba(22, 119, 255, 0.18);
     }
 
     .menu-button {
@@ -419,7 +469,8 @@
 
       background: #20c878;
 
-      box-shadow: 0 0 0 5px rgba(32, 200, 120, 0.09);
+      box-shadow:
+        0 0 0 5px rgba(32, 200, 120, 0.09);
     }
 
     .hero h1 {
@@ -501,12 +552,15 @@
       color: white;
       background: #102033;
 
-      box-shadow: 0 15px 35px rgba(16, 32, 51, 0.14);
+      box-shadow:
+        0 15px 35px rgba(16, 32, 51, 0.14);
     }
 
     .button-dark:hover {
       background: var(--blue);
-      box-shadow: 0 15px 35px rgba(22, 119, 255, 0.22);
+
+      box-shadow:
+        0 15px 35px rgba(22, 119, 255, 0.22);
     }
 
     .button-light {
@@ -552,7 +606,9 @@
       letter-spacing: 1.2px;
     }
 
-    /* Hero image */
+    /* ------------------------------
+       HERO IMAGE
+    ------------------------------ */
 
     .hero-image-area {
       position: relative;
@@ -671,7 +727,7 @@
     }
 
     /* ------------------------------
-       INTRO ABOUT
+       ABOUT
     ------------------------------ */
 
     .about-grid {
@@ -723,11 +779,12 @@
       border: 1px solid rgba(25, 100, 160, 0.07);
       border-radius: 20px;
 
-      background: linear-gradient(
-        135deg,
-        #ffffff,
-        #f4faff
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #f4faff
+        );
 
       transition: 0.3s ease;
     }
@@ -742,21 +799,17 @@
 
     .info-icon {
       margin-bottom: 10px;
-
       font-size: 22px;
     }
 
     .info-card h3 {
       color: var(--text-dark);
-
       font-size: 15px;
     }
 
     .info-card p {
       margin-top: 4px;
-
       color: #8493a3;
-
       font-size: 12px;
     }
 
@@ -768,7 +821,6 @@
       margin-top: 45px;
 
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
 
       gap: 15px;
@@ -874,7 +926,8 @@
       font-size: 12px;
       font-weight: 850;
 
-      box-shadow: 0 6px 20px rgba(23, 72, 115, 0.04);
+      box-shadow:
+        0 6px 20px rgba(23, 72, 115, 0.04);
 
       transition: 0.25s ease;
     }
@@ -886,7 +939,8 @@
 
       border-color: rgba(22, 119, 255, 0.22);
 
-      box-shadow: 0 12px 25px rgba(22, 119, 255, 0.08);
+      box-shadow:
+        0 12px 25px rgba(22, 119, 255, 0.08);
     }
 
     /* ------------------------------
@@ -1274,6 +1328,11 @@
         display: block;
       }
 
+      .language-switcher {
+        margin-left: auto;
+        margin-right: 8px;
+      }
+
       .nav-wrap.mobile-open .nav-links {
         position: absolute;
 
@@ -1415,6 +1474,10 @@
       .hero-meta {
         gap: 20px;
       }
+
+      .language-button {
+        padding: 7px 8px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1441,15 +1504,18 @@
 
   <div id="loader">
     <div class="loader-inner">
+
       <div class="loader-logo">
         Aadish<span>.</span>
       </div>
 
       <div class="loader-line"></div>
+
     </div>
   </div>
 
   <div id="progress"></div>
+
 
   <!-- NAVIGATION -->
 
@@ -1458,37 +1524,83 @@
     <nav>
 
       <a href="#home" class="brand">
-        <span class="brand-mark">AM</span>
+
+        <span class="brand-mark">
+          AM
+        </span>
 
         <span class="brand-name">
           Aadish<span>.</span>
         </span>
+
       </a>
+
 
       <div class="nav-links">
 
-        <a href="#home" class="active">Home</a>
+        <a href="#home" class="active" data-i18n="nav.home">
+          Home
+        </a>
 
-        <a href="#about">About</a>
+        <a href="#about" data-i18n="nav.about">
+          About
+        </a>
 
-        <a href="#journey">Journey</a>
+        <a href="#journey" data-i18n="nav.journey">
+          Journey
+        </a>
 
-        <a href="#interests">Interests</a>
+        <a href="#interests" data-i18n="nav.interests">
+          Interests
+        </a>
 
-        <a href="#vision">Vision</a>
+        <a href="#vision" data-i18n="nav.vision">
+          Vision
+        </a>
 
-        <a href="#projects">Work</a>
+        <a href="#projects" data-i18n="nav.work">
+          Work
+        </a>
 
-        <a href="#contact" class="nav-contact">
+        <a
+          href="#contact"
+          class="nav-contact"
+          data-i18n="nav.contact"
+        >
           Contact
         </a>
 
       </div>
 
+
+      <!-- LANGUAGE BUTTONS -->
+
+      <div class="language-switcher">
+
+        <button
+          class="language-button active"
+          data-language="en"
+          type="button"
+        >
+          EN
+        </button>
+
+        <button
+          class="language-button"
+          data-language="gu"
+          type="button"
+        >
+          ગુજરાતી
+        </button>
+
+      </div>
+
+
       <button
         class="menu-button"
         id="menuButton"
         aria-label="Open menu"
+        type="button"
       >
         ☰
       </button>
@@ -1508,22 +1620,32 @@
 
         <div class="hero-small">
           <span class="live-dot"></span>
-          Welcome to my portfolio
+
+          <span data-i18n="hero.welcome">
+            Welcome to my portfolio
+          </span>
         </div>
+
 
         <h1>
           AADISH
+
           <span class="gradient">
             MAHIDA.
           </span>
         </h1>
 
-        <p class="hero-subtitle">
+
+        <p
+          class="hero-subtitle"
+          data-i18n="hero.description"
+        >
           Student, creator, learner, and builder.
           I enjoy turning ideas into projects, exploring
           new interests, and building things that people
           can actually use.
         </p>
+
 
         <div class="hero-buttons">
 
@@ -1531,34 +1653,57 @@
             href="#projects"
             class="button button-dark"
           >
-            Explore My Work
+            <span data-i18n="hero.explore">
+              Explore My Work
+            </span>
+
             <span>↗</span>
           </a>
+
 
           <a
             href="#about"
             class="button button-light"
+            data-i18n="hero.story"
           >
             Discover My Story
           </a>
 
         </div>
 
+
         <div class="hero-meta">
 
           <div class="meta">
+
             <strong>09</strong>
-            <span>Projects</span>
+
+            <span data-i18n="meta.projects">
+              Projects
+            </span>
+
           </div>
 
+
           <div class="meta">
+
             <strong>03</strong>
-            <span>Sports</span>
+
+            <span data-i18n="meta.sports">
+              Sports
+            </span>
+
           </div>
 
+
           <div class="meta">
+
             <strong>∞</strong>
-            <span>Ideas</span>
+
+            <span data-i18n="meta.ideas">
+              Ideas
+            </span>
+
           </div>
 
         </div>
@@ -1570,6 +1715,7 @@
 
         <div class="hero-aura"></div>
 
+
         <div class="hero-photo-frame">
 
           <img
@@ -1577,18 +1723,25 @@
             alt="Aadish Mahida"
           >
 
+
           <div class="photo-label">
 
-            <small>Currently</small>
+            <small data-i18n="photo.currently">
+              Currently
+            </small>
 
-            Learning & Creating
+            <span data-i18n="photo.learning">
+              Learning & Creating
+            </span>
 
           </div>
 
-          <div class="photo-label-right">
 
+          <div
+            class="photo-label-right"
+            data-i18n="photo.builder"
+          >
             Builder ⚡
-
           </div>
 
         </div>
@@ -1600,19 +1753,33 @@
 
     <!-- ABOUT -->
 
-    <section class="container reveal" id="about">
+    <section
+      class="container reveal"
+      id="about"
+    >
 
       <div>
 
-        <div class="eyebrow">
+        <div
+          class="eyebrow"
+          data-i18n="about.label"
+        >
           01 / About
         </div>
 
-        <h2 class="section-title">
+
+        <h2
+          class="section-title"
+          data-i18n="about.title"
+        >
           The person behind the projects.
         </h2>
 
-        <p class="section-description">
+
+        <p
+          class="section-description"
+          data-i18n="about.description"
+        >
           A little more about who I am, what I enjoy,
           and what motivates me to keep learning.
         </p>
@@ -1624,21 +1791,23 @@
 
         <div class="card about-main">
 
-          <p>
+          <p data-i18n="about.p1">
             Hi! My name is Aadish Mahida. I am a student
             who enjoys learning new things, exploring
             different interests, and challenging myself
             both inside and outside of school.
           </p>
 
-          <p>
+
+          <p data-i18n="about.p2">
             I have an older sister who also has a website.
             I like to play pickleball, volleyball, and
             badminton. One of my hobbies is creating apps
             like this one.
           </p>
 
-          <p>
+
+          <p data-i18n="about.p3">
             I enjoy building projects and sharing them
             with my class. If you need help creating an
             app, you can email me using the contact
@@ -1652,13 +1821,15 @@
 
           <div class="info-card">
 
-            <div class="info-icon">💻</div>
+            <div class="info-icon">
+              💻
+            </div>
 
-            <h3>
+            <h3 data-i18n="about.creator">
               Creator
             </h3>
 
-            <p>
+            <p data-i18n="about.creatorText">
               Turning ideas into apps, games, and
               interactive projects.
             </p>
@@ -1668,13 +1839,15 @@
 
           <div class="info-card">
 
-            <div class="info-icon">🧠</div>
+            <div class="info-icon">
+              🧠
+            </div>
 
-            <h3>
+            <h3 data-i18n="about.learner">
               Learner
             </h3>
 
-            <p>
+            <p data-i18n="about.learnerText">
               Always exploring new subjects and
               challenging myself.
             </p>
@@ -1684,13 +1857,15 @@
 
           <div class="info-card">
 
-            <div class="info-icon">🚀</div>
+            <div class="info-icon">
+              🚀
+            </div>
 
-            <h3>
+            <h3 data-i18n="about.builder">
               Builder
             </h3>
 
-            <p>
+            <p data-i18n="about.builderText">
               Creating things and finding ways to make
               ideas real.
             </p>
@@ -1706,19 +1881,33 @@
 
     <!-- JOURNEY -->
 
-    <section class="container reveal" id="journey">
+    <section
+      class="container reveal"
+      id="journey"
+    >
 
       <div>
 
-        <div class="eyebrow">
+        <div
+          class="eyebrow"
+          data-i18n="journey.label"
+        >
           02 / Journey
         </div>
 
-        <h2 class="section-title">
+
+        <h2
+          class="section-title"
+          data-i18n="journey.title"
+        >
           What I do.
         </h2>
 
-        <p class="section-description">
+
+        <p
+          class="section-description"
+          data-i18n="journey.description"
+        >
           The activities, experiences, and areas that
           are part of my life.
         </p>
@@ -1734,11 +1923,11 @@
             01
           </div>
 
-          <h3>
+          <h3 data-i18n="journey.swimming">
             🏊 Swimming
           </h3>
 
-          <p>
+          <p data-i18n="journey.swimmingText">
             Swimming at British Swim School
             Fairfield NJ.
           </p>
@@ -1752,11 +1941,11 @@
             02
           </div>
 
-          <h3>
+          <h3 data-i18n="journey.student">
             📚 Student
           </h3>
 
-          <p>
+          <p data-i18n="journey.studentText">
             Learning new things and challenging
             myself academically.
           </p>
@@ -1770,11 +1959,11 @@
             03
           </div>
 
-          <h3>
+          <h3 data-i18n="journey.school">
             🏫 School Activities
           </h3>
 
-          <p>
+          <p data-i18n="journey.schoolText">
             Participating in school activities
             and projects.
           </p>
@@ -1788,11 +1977,11 @@
             04
           </div>
 
-          <h3>
+          <h3 data-i18n="journey.community">
             🌎 Community
           </h3>
 
-          <p>
+          <p data-i18n="journey.communityText">
             Community involvement and helping
             others.
           </p>
@@ -1806,11 +1995,11 @@
             05
           </div>
 
-          <h3>
+          <h3 data-i18n="journey.academic">
             🏆 Academic Growth
           </h3>
 
-          <p>
+          <p data-i18n="journey.academicText">
             Working hard and continuing to improve.
           </p>
 
@@ -1823,11 +2012,11 @@
             06
           </div>
 
-          <h3>
+          <h3 data-i18n="journey.apps">
             💻 Making Apps
           </h3>
 
-          <p>
+          <p data-i18n="journey.appsText">
             Creating apps and sharing them with
             my class.
           </p>
@@ -1841,19 +2030,33 @@
 
     <!-- INTERESTS -->
 
-    <section class="container reveal" id="interests">
+    <section
+      class="container reveal"
+      id="interests"
+    >
 
       <div>
 
-        <div class="eyebrow">
+        <div
+          class="eyebrow"
+          data-i18n="interests.label"
+        >
           03 / Interests
         </div>
 
-        <h2 class="section-title">
+
+        <h2
+          class="section-title"
+          data-i18n="interests.title"
+        >
           What keeps me curious.
         </h2>
 
-        <p class="section-description">
+
+        <p
+          class="section-description"
+          data-i18n="interests.description"
+        >
           From technology and science to sports and
           creative projects, I like exploring a lot
           of different areas.
@@ -1866,25 +2069,75 @@
 
         <div class="interest-grid">
 
-          <div class="interest">⚖️ Law</div>
+          <div
+            class="interest"
+            data-i18n="interest.law"
+          >
+            ⚖️ Law
+          </div>
 
-          <div class="interest">💻 Technology</div>
+          <div
+            class="interest"
+            data-i18n="interest.tech"
+          >
+            💻 Technology
+          </div>
 
-          <div class="interest">🔬 Science</div>
+          <div
+            class="interest"
+            data-i18n="interest.science"
+          >
+            🔬 Science
+          </div>
 
-          <div class="interest">🏆 Sports</div>
+          <div
+            class="interest"
+            data-i18n="interest.sports"
+          >
+            🏆 Sports
+          </div>
 
-          <div class="interest">📖 Reading</div>
+          <div
+            class="interest"
+            data-i18n="interest.reading"
+          >
+            📖 Reading
+          </div>
 
-          <div class="interest">🎨 Creative Projects</div>
+          <div
+            class="interest"
+            data-i18n="interest.creative"
+          >
+            🎨 Creative Projects
+          </div>
 
-          <div class="interest">🖥️ Computer Engineering</div>
+          <div
+            class="interest"
+            data-i18n="interest.engineering"
+          >
+            🖥️ Computer Engineering
+          </div>
 
-          <div class="interest">🏓 Pickleball</div>
+          <div
+            class="interest"
+            data-i18n="interest.pickleball"
+          >
+            🏓 Pickleball
+          </div>
 
-          <div class="interest">🏐 Volleyball</div>
+          <div
+            class="interest"
+            data-i18n="interest.volleyball"
+          >
+            🏐 Volleyball
+          </div>
 
-          <div class="interest">🏸 Badminton</div>
+          <div
+            class="interest"
+            data-i18n="interest.badminton"
+          >
+            🏸 Badminton
+          </div>
 
         </div>
 
@@ -1895,19 +2148,33 @@
 
     <!-- VISION -->
 
-    <section class="container reveal" id="vision">
+    <section
+      class="container reveal"
+      id="vision"
+    >
 
       <div>
 
-        <div class="eyebrow">
+        <div
+          class="eyebrow"
+          data-i18n="vision.label"
+        >
           04 / Vision
         </div>
 
-        <h2 class="section-title">
+
+        <h2
+          class="section-title"
+          data-i18n="vision.title"
+        >
           Think beyond today.
         </h2>
 
-        <p class="section-description">
+
+        <p
+          class="section-description"
+          data-i18n="vision.description"
+        >
           The direction I want my learning and ambition
           to take me.
         </p>
@@ -1917,19 +2184,25 @@
 
       <div class="vision">
 
-        <div class="eyebrow">
+        <div
+          class="eyebrow"
+          data-i18n="vision.goal"
+        >
           The long-term goal
         </div>
 
-        <h2>
+
+        <h2 data-i18n="vision.heading">
           Future Lawyer.
           Lifelong Learner.
         </h2>
 
-        <p>
+
+        <p data-i18n="vision.text">
           My goal is to become a lawyer, continue
           learning, and attend Princeton University.
         </p>
+
 
         <div class="vision-tag">
           🎓 PRINCETON
@@ -1946,19 +2219,33 @@
 
     <!-- PROJECTS -->
 
-    <section class="container reveal" id="projects">
+    <section
+      class="container reveal"
+      id="projects"
+    >
 
       <div>
 
-        <div class="eyebrow">
+        <div
+          class="eyebrow"
+          data-i18n="projects.label"
+        >
           05 / Selected Work
         </div>
 
-        <h2 class="section-title">
+
+        <h2
+          class="section-title"
+          data-i18n="projects.title"
+        >
           Things I've built.
         </h2>
 
-        <p class="section-description">
+
+        <p
+          class="section-description"
+          data-i18n="projects.description"
+        >
           Apps, games, experiments, and interactive
           projects created by me.
         </p>
@@ -1968,6 +2255,8 @@
 
       <div class="project-grid">
 
+
+        <!-- PROJECT 01 -->
 
         <a
           class="project"
@@ -1984,14 +2273,17 @@
             Aadish Games
           </h3>
 
-          <p>
+          <p data-i18n="project.gamesText">
             My collection of games and interactive
             projects.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.games"
+            >
               Games
             </span>
 
@@ -2003,6 +2295,8 @@
 
         </a>
 
+
+        <!-- PROJECT 02 -->
 
         <a
           class="project"
@@ -2019,14 +2313,17 @@
             Earth Explorers
           </h3>
 
-          <p>
+          <p data-i18n="project.earthText">
             Explore the Earth through an interactive
             project.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.exploration"
+            >
               Exploration
             </span>
 
@@ -2038,6 +2335,8 @@
 
         </a>
 
+
+        <!-- PROJECT 03 -->
 
         <a
           class="project"
@@ -2054,13 +2353,16 @@
             Service Desk
           </h3>
 
-          <p>
+          <p data-i18n="project.serviceText">
             A service desk project created by me.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.app"
+            >
               App
             </span>
 
@@ -2072,6 +2374,8 @@
 
         </a>
 
+
+        <!-- PROJECT 04 -->
 
         <a
           class="project"
@@ -2088,13 +2392,16 @@
             Space Run
           </h3>
 
-          <p>
+          <p data-i18n="project.spaceText">
             A space-themed interactive game project.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.game"
+            >
               Game
             </span>
 
@@ -2106,6 +2413,8 @@
 
         </a>
 
+
+        <!-- PROJECT 05 -->
 
         <a
           class="project"
@@ -2122,13 +2431,16 @@
             Slow Flow
           </h3>
 
-          <p>
+          <p data-i18n="project.slowText">
             An interactive project created by me.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.interactive"
+            >
               Interactive
             </span>
 
@@ -2140,6 +2452,8 @@
 
         </a>
 
+
+        <!-- PROJECT 06 -->
 
         <a
           class="project"
@@ -2156,13 +2470,16 @@
             Map Conquest
           </h3>
 
-          <p>
+          <p data-i18n="project.mapText">
             A map-based strategy game project.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.strategy"
+            >
               Strategy
             </span>
 
@@ -2174,6 +2491,8 @@
 
         </a>
 
+
+        <!-- PROJECT 07 -->
 
         <a
           class="project"
@@ -2190,13 +2509,16 @@
             Rock Learn
           </h3>
 
-          <p>
+          <p data-i18n="project.rockText">
             An educational project about rocks.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.education"
+            >
               Education
             </span>
 
@@ -2208,6 +2530,8 @@
 
         </a>
 
+
+        <!-- PROJECT 08 -->
 
         <a
           class="project"
@@ -2224,13 +2548,16 @@
             Rocket Math Mission
           </h3>
 
-          <p>
+          <p data-i18n="project.mathText">
             A space-themed math learning project.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.learning"
+            >
               Learning
             </span>
 
@@ -2242,6 +2569,8 @@
 
         </a>
 
+
+        <!-- PROJECT 09 -->
 
         <a
           class="project"
@@ -2258,13 +2587,16 @@
             Finance Tracker
           </h3>
 
-          <p>
+          <p data-i18n="project.financeText">
             A finance tracking web application.
           </p>
 
           <div class="project-bottom">
 
-            <span class="project-tag">
+            <span
+              class="project-tag"
+              data-i18n="project.webApp"
+            >
               Web App
             </span>
 
@@ -2276,7 +2608,6 @@
 
         </a>
 
-
       </div>
 
     </section>
@@ -2284,19 +2615,33 @@
 
     <!-- CONTACT -->
 
-    <section class="container reveal" id="contact">
+    <section
+      class="container reveal"
+      id="contact"
+    >
 
       <div>
 
-        <div class="eyebrow">
+        <div
+          class="eyebrow"
+          data-i18n="contact.label"
+        >
           06 / Contact
         </div>
 
-        <h2 class="section-title">
+
+        <h2
+          class="section-title"
+          data-i18n="contact.title"
+        >
           Let's build something.
         </h2>
 
-        <p class="section-description">
+
+        <p
+          class="section-description"
+          data-i18n="contact.description"
+        >
           Have an idea, project, or question?
           Reach out.
         </p>
@@ -2308,21 +2653,27 @@
 
         <div class="card contact-main">
 
-          <h3>
+          <h3 data-i18n="contact.idea">
             Have an idea?
           </h3>
 
-          <p>
+
+          <p data-i18n="contact.text">
             I enjoy creating projects and exploring
             new ideas. If you want to reach out,
             email is the best way to contact me.
           </p>
 
+
           <a
             href="mailto:aadish.mahida@gmail.com"
             class="button button-dark"
           >
-            Send an Email ↗
+            <span data-i18n="contact.emailButton">
+              Send an Email
+            </span>
+
+            <span>↗</span>
           </a>
 
         </div>
@@ -2332,7 +2683,10 @@
 
           <div class="contact-item">
 
-            <div class="contact-label">
+            <div
+              class="contact-label"
+              data-i18n="contact.emailLabel"
+            >
               Email
             </div>
 
@@ -2348,7 +2702,10 @@
 
           <div class="contact-item">
 
-            <div class="contact-label">
+            <div
+              class="contact-label"
+              data-i18n="contact.textLabel"
+            >
               Text
             </div>
 
@@ -2361,11 +2718,17 @@
 
           <div class="contact-item">
 
-            <div class="contact-label">
+            <div
+              class="contact-label"
+              data-i18n="contact.important"
+            >
               Important
             </div>
 
-            <span class="contact-value">
+            <span
+              class="contact-value"
+              data-i18n="contact.noCall"
+            >
               PLEASE DO NOT CALL!
             </span>
 
@@ -2380,18 +2743,26 @@
   </main>
 
 
+  <!-- FOOTER -->
+
   <footer>
 
     © 2026
     <strong>Aadish Mahida</strong>
-    · Student · Creator · Learner
+
+    <span data-i18n="footer.text">
+      · Student · Creator · Learner
+    </span>
 
   </footer>
 
 
+  <!-- BACK TO TOP -->
+
   <button
     id="top"
     aria-label="Back to top"
+    type="button"
   >
     ↑
   </button>
@@ -2417,7 +2788,7 @@
 
 
     /* ------------------------------
-       MOBILE NAV
+       MOBILE NAVIGATION
     ------------------------------ */
 
     const navWrap =
@@ -2426,24 +2797,741 @@
     const menuButton =
       document.getElementById("menuButton");
 
-    menuButton.addEventListener("click", () => {
 
-      navWrap.classList.toggle("mobile-open");
+    menuButton.addEventListener(
+      "click",
+      () => {
 
-    });
+        navWrap.classList.toggle(
+          "mobile-open"
+        );
+
+      }
+    );
 
 
     document
       .querySelectorAll(".nav-links a")
       .forEach(link => {
 
-        link.addEventListener("click", () => {
+        link.addEventListener(
+          "click",
+          () => {
 
-          navWrap.classList.remove("mobile-open");
+            navWrap.classList.remove(
+              "mobile-open"
+            );
 
-        });
+          }
+        );
 
       });
+
+
+    /* ------------------------------
+       TRANSLATIONS
+    ------------------------------ */
+
+    const translations = {
+
+      en: {
+
+        "nav.home":
+          "Home",
+
+        "nav.about":
+          "About",
+
+        "nav.journey":
+          "Journey",
+
+        "nav.interests":
+          "Interests",
+
+        "nav.vision":
+          "Vision",
+
+        "nav.work":
+          "Work",
+
+        "nav.contact":
+          "Contact",
+
+
+        "hero.welcome":
+          "Welcome to my portfolio",
+
+        "hero.description":
+          "Student, creator, learner, and builder. I enjoy turning ideas into projects, exploring new interests, and building things that people can actually use.",
+
+        "hero.explore":
+          "Explore My Work",
+
+        "hero.story":
+          "Discover My Story",
+
+
+        "meta.projects":
+          "Projects",
+
+        "meta.sports":
+          "Sports",
+
+        "meta.ideas":
+          "Ideas",
+
+
+        "photo.currently":
+          "Currently",
+
+        "photo.learning":
+          "Learning & Creating",
+
+        "photo.builder":
+          "Builder ⚡",
+
+
+        "about.label":
+          "01 / About",
+
+        "about.title":
+          "The person behind the projects.",
+
+        "about.description":
+          "A little more about who I am, what I enjoy, and what motivates me to keep learning.",
+
+        "about.p1":
+          "Hi! My name is Aadish Mahida. I am a student who enjoys learning new things, exploring different interests, and challenging myself both inside and outside of school.",
+
+        "about.p2":
+          "I have an older sister who also has a website. I like to play pickleball, volleyball, and badminton. One of my hobbies is creating apps like this one.",
+
+        "about.p3":
+          "I enjoy building projects and sharing them with my class. If you need help creating an app, you can email me using the contact information below.",
+
+        "about.creator":
+          "Creator",
+
+        "about.creatorText":
+          "Turning ideas into apps, games, and interactive projects.",
+
+        "about.learner":
+          "Learner",
+
+        "about.learnerText":
+          "Always exploring new subjects and challenging myself.",
+
+        "about.builder":
+          "Builder",
+
+        "about.builderText":
+          "Creating things and finding ways to make ideas real.",
+
+
+        "journey.label":
+          "02 / Journey",
+
+        "journey.title":
+          "What I do.",
+
+        "journey.description":
+          "The activities, experiences, and areas that are part of my life.",
+
+        "journey.swimming":
+          "🏊 Swimming",
+
+        "journey.swimmingText":
+          "Swimming at British Swim School Fairfield NJ.",
+
+        "journey.student":
+          "📚 Student",
+
+        "journey.studentText":
+          "Learning new things and challenging myself academically.",
+
+        "journey.school":
+          "🏫 School Activities",
+
+        "journey.schoolText":
+          "Participating in school activities and projects.",
+
+        "journey.community":
+          "🌎 Community",
+
+        "journey.communityText":
+          "Community involvement and helping others.",
+
+        "journey.academic":
+          "🏆 Academic Growth",
+
+        "journey.academicText":
+          "Working hard and continuing to improve.",
+
+        "journey.apps":
+          "💻 Making Apps",
+
+        "journey.appsText":
+          "Creating apps and sharing them with my class.",
+
+
+        "interests.label":
+          "03 / Interests",
+
+        "interests.title":
+          "What keeps me curious.",
+
+        "interests.description":
+          "From technology and science to sports and creative projects, I like exploring a lot of different areas.",
+
+        "interest.law":
+          "⚖️ Law",
+
+        "interest.tech":
+          "💻 Technology",
+
+        "interest.science":
+          "🔬 Science",
+
+        "interest.sports":
+          "🏆 Sports",
+
+        "interest.reading":
+          "📖 Reading",
+
+        "interest.creative":
+          "🎨 Creative Projects",
+
+        "interest.engineering":
+          "🖥️ Computer Engineering",
+
+        "interest.pickleball":
+          "🏓 Pickleball",
+
+        "interest.volleyball":
+          "🏐 Volleyball",
+
+        "interest.badminton":
+          "🏸 Badminton",
+
+
+        "vision.label":
+          "04 / Vision",
+
+        "vision.title":
+          "Think beyond today.",
+
+        "vision.description":
+          "The direction I want my learning and ambition to take me.",
+
+        "vision.goal":
+          "The long-term goal",
+
+        "vision.heading":
+          "Future Lawyer. Lifelong Learner.",
+
+        "vision.text":
+          "My goal is to become a lawyer, continue learning, and attend Princeton University.",
+
+
+        "projects.label":
+          "05 / Selected Work",
+
+        "projects.title":
+          "Things I've built.",
+
+        "projects.description":
+          "Apps, games, experiments, and interactive projects created by me.",
+
+        "project.gamesText":
+          "My collection of games and interactive projects.",
+
+        "project.games":
+          "Games",
+
+        "project.earthText":
+          "Explore the Earth through an interactive project.",
+
+        "project.exploration":
+          "Exploration",
+
+        "project.serviceText":
+          "A service desk project created by me.",
+
+        "project.app":
+          "App",
+
+        "project.spaceText":
+          "A space-themed interactive game project.",
+
+        "project.game":
+          "Game",
+
+        "project.slowText":
+          "An interactive project created by me.",
+
+        "project.interactive":
+          "Interactive",
+
+        "project.mapText":
+          "A map-based strategy game project.",
+
+        "project.strategy":
+          "Strategy",
+
+        "project.rockText":
+          "An educational project about rocks.",
+
+        "project.education":
+          "Education",
+
+        "project.mathText":
+          "A space-themed math learning project.",
+
+        "project.learning":
+          "Learning",
+
+        "project.financeText":
+          "A finance tracking web application.",
+
+        "project.webApp":
+          "Web App",
+
+
+        "contact.label":
+          "06 / Contact",
+
+        "contact.title":
+          "Let's build something.",
+
+        "contact.description":
+          "Have an idea, project, or question? Reach out.",
+
+        "contact.idea":
+          "Have an idea?",
+
+        "contact.text":
+          "I enjoy creating projects and exploring new ideas. If you want to reach out, email is the best way to contact me.",
+
+        "contact.emailButton":
+          "Send an Email",
+
+        "contact.emailLabel":
+          "Email",
+
+        "contact.textLabel":
+          "Text",
+
+        "contact.important":
+          "Important",
+
+        "contact.noCall":
+          "PLEASE DO NOT CALL!",
+
+
+        "footer.text":
+          "· Student · Creator · Learner"
+
+      },
+
+
+      /* ------------------------------
+         GUJARATI
+      ------------------------------ */
+
+      gu: {
+
+        "nav.home":
+          "હોમ",
+
+        "nav.about":
+          "મારા વિશે",
+
+        "nav.journey":
+          "મારી સફર",
+
+        "nav.interests":
+          "રુચિઓ",
+
+        "nav.vision":
+          "વિઝન",
+
+        "nav.work":
+          "મારું કામ",
+
+        "nav.contact":
+          "સંપર્ક",
+
+
+        "hero.welcome":
+          "મારા પોર્ટફોલિયોમાં આપનું સ્વાગત છે",
+
+        "hero.description":
+          "વિદ્યાર્થી, સર્જક, શીખનાર અને બિલ્ડર. મને વિચારોને પ્રોજેક્ટ્સમાં બદલવા, નવી રુચિઓ શોધવા અને લોકો ઉપયોગ કરી શકે તેવી વસ્તુઓ બનાવવાનું ગમે છે.",
+
+        "hero.explore":
+          "મારું કામ જુઓ",
+
+        "hero.story":
+          "મારી વાર્તા જાણો",
+
+
+        "meta.projects":
+          "પ્રોજેક્ટ્સ",
+
+        "meta.sports":
+          "રમતગમત",
+
+        "meta.ideas":
+          "વિચારો",
+
+
+        "photo.currently":
+          "હાલમાં",
+
+        "photo.learning":
+          "શીખવું અને બનાવવું",
+
+        "photo.builder":
+          "બિલ્ડર ⚡",
+
+
+        "about.label":
+          "01 / મારા વિશે",
+
+        "about.title":
+          "આ પ્રોજેક્ટ્સ પાછળની વ્યક્તિ.",
+
+        "about.description":
+          "હું કોણ છું, મને શું ગમે છે અને મને સતત શીખવા માટે શું પ્રેરણા આપે છે તેના વિશે થોડું વધુ.",
+
+        "about.p1":
+          "નમસ્તે! મારું નામ Aadish Mahida છે. હું એક વિદ્યાર્થી છું જેને નવી વસ્તુઓ શીખવી, અલગ અલગ રુચિઓ શોધવી અને શાળા તથા શાળાની બહાર પોતાને પડકારવાનું ગમે છે.",
+
+        "about.p2":
+          "મારી એક મોટી બહેન છે જેની પોતાની વેબસાઇટ પણ છે. મને પિકલબોલ, વોલીબોલ અને બેડમિન્ટન રમવાનું ગમે છે. મારી એક મનપસંદ પ્રવૃત્તિ આના જેવી એપ્સ બનાવવાની છે.",
+
+        "about.p3":
+          "મને પ્રોજેક્ટ્સ બનાવવાનું અને તેને મારા ક્લાસ સાથે શેર કરવાનું ગમે છે. જો તમને એપ બનાવવામાં મદદ જોઈએ, તો નીચે આપેલી સંપર્ક માહિતી દ્વારા મને ઈમેલ કરી શકો છો.",
+
+        "about.creator":
+          "સર્જક",
+
+        "about.creatorText":
+          "વિચારોને એપ્સ, ગેમ્સ અને ઇન્ટરેક્ટિવ પ્રોજેક્ટ્સમાં બદલવા.",
+
+        "about.learner":
+          "શીખનાર",
+
+        "about.learnerText":
+          "હંમેશા નવા વિષયો શોધવા અને પોતાને પડકારવા.",
+
+        "about.builder":
+          "બિલ્ડર",
+
+        "about.builderText":
+          "વસ્તુઓ બનાવવી અને વિચારોને વાસ્તવિક બનાવવાના રસ્તા શોધવા.",
+
+
+        "journey.label":
+          "02 / મારી સફર",
+
+        "journey.title":
+          "હું શું કરું છું.",
+
+        "journey.description":
+          "મારા જીવનનો ભાગ બનેલી પ્રવૃત્તિઓ, અનુભવો અને ક્ષેત્રો.",
+
+        "journey.swimming":
+          "🏊 સ્વિમિંગ",
+
+        "journey.swimmingText":
+          "British Swim School Fairfield NJ ખાતે સ્વિમિંગ.",
+
+        "journey.student":
+          "📚 વિદ્યાર્થી",
+
+        "journey.studentText":
+          "નવી વસ્તુઓ શીખવી અને અભ્યાસમાં પોતાને પડકારવો.",
+
+        "journey.school":
+          "🏫 શાળાની પ્રવૃત્તિઓ",
+
+        "journey.schoolText":
+          "શાળાની પ્રવૃત્તિઓ અને પ્રોજેક્ટ્સમાં ભાગ લેવો.",
+
+        "journey.community":
+          "🌎 સમુદાય",
+
+        "journey.communityText":
+          "સમુદાયમાં ભાગ લેવો અને બીજાઓને મદદ કરવી.",
+
+        "journey.academic":
+          "🏆 શૈક્ષણિક વિકાસ",
+
+        "journey.academicText":
+          "મહેનત કરવી અને સતત સુધારો કરવો.",
+
+        "journey.apps":
+          "💻 એપ્સ બનાવવી",
+
+        "journey.appsText":
+          "એપ્સ બનાવવી અને તેને મારા ક્લાસ સાથે શેર કરવી.",
+
+
+        "interests.label":
+          "03 / રુચિઓ",
+
+        "interests.title":
+          "મારી જિજ્ઞાસાને જીવંત રાખતી વસ્તુઓ.",
+
+        "interests.description":
+          "ટેક્નોલોજી અને વિજ્ઞાનથી લઈને રમતગમત અને સર્જનાત્મક પ્રોજેક્ટ્સ સુધી, મને ઘણા અલગ અલગ ક્ષેત્રો શોધવાનું ગમે છે.",
+
+        "interest.law":
+          "⚖️ કાયદો",
+
+        "interest.tech":
+          "💻 ટેક્નોલોજી",
+
+        "interest.science":
+          "🔬 વિજ્ઞાન",
+
+        "interest.sports":
+          "🏆 રમતગમત",
+
+        "interest.reading":
+          "📖 વાંચન",
+
+        "interest.creative":
+          "🎨 સર્જનાત્મક પ્રોજેક્ટ્સ",
+
+        "interest.engineering":
+          "🖥️ કમ્પ્યુટર એન્જિનિયરિંગ",
+
+        "interest.pickleball":
+          "🏓 પિકલબોલ",
+
+        "interest.volleyball":
+          "🏐 વોલીબોલ",
+
+        "interest.badminton":
+          "🏸 બેડમિન્ટન",
+
+
+        "vision.label":
+          "04 / વિઝન",
+
+        "vision.title":
+          "આજથી આગળ વિચારો.",
+
+        "vision.description":
+          "મારી શીખવાની સફર અને મહત્વાકાંક્ષા મને જે દિશામાં લઈ જવા માંગે છે.",
+
+        "vision.goal":
+          "લાંબા ગાળાનું લક્ષ્ય",
+
+        "vision.heading":
+          "ભવિષ્યનો વકીલ. જીવનભર શીખનાર.",
+
+        "vision.text":
+          "મારું લક્ષ્ય વકીલ બનવાનું, સતત શીખવાનું અને Princeton Universityમાં અભ્યાસ કરવાનું છે.",
+
+
+        "projects.label":
+          "05 / પસંદ કરેલું કામ",
+
+        "projects.title":
+          "મેં બનાવેલી વસ્તુઓ.",
+
+        "projects.description":
+          "મારા દ્વારા બનાવવામાં આવેલી એપ્સ, ગેમ્સ, પ્રયોગો અને ઇન્ટરેક્ટિવ પ્રોજેક્ટ્સ.",
+
+        "project.gamesText":
+          "મારી ગેમ્સ અને ઇન્ટરેક્ટિવ પ્રોજેક્ટ્સનો સંગ્રહ.",
+
+        "project.games":
+          "ગેમ્સ",
+
+        "project.earthText":
+          "ઇન્ટરેક્ટિવ પ્રોજેક્ટ દ્વારા પૃથ્વીની શોધ કરો.",
+
+        "project.exploration":
+          "શોધખોળ",
+
+        "project.serviceText":
+          "મારા દ્વારા બનાવવામાં આવેલ સર્વિસ ડેસ્ક પ્રોજેક્ટ.",
+
+        "project.app":
+          "એપ",
+
+        "project.spaceText":
+          "અવકાશ આધારિત ઇન્ટરેક્ટિવ ગેમ પ્રોજેક્ટ.",
+
+        "project.game":
+          "ગેમ",
+
+        "project.slowText":
+          "મારા દ્વારા બનાવવામાં આવેલ ઇન્ટરેક્ટિવ પ્રોજેક્ટ.",
+
+        "project.interactive":
+          "ઇન્ટરેક્ટિવ",
+
+        "project.mapText":
+          "નકશા આધારિત સ્ટ્રેટેજી ગેમ પ્રોજેક્ટ.",
+
+        "project.strategy":
+          "સ્ટ્રેટેજી",
+
+        "project.rockText":
+          "ખડકો વિશેનો શૈક્ષણિક પ્રોજેક્ટ.",
+
+        "project.education":
+          "શિક્ષણ",
+
+        "project.mathText":
+          "અવકાશ આધારિત ગણિત શીખવાનો પ્રોજેક્ટ.",
+
+        "project.learning":
+          "શીખવું",
+
+        "project.financeText":
+          "નાણાકીય માહિતી ટ્રેક કરવાની વેબ એપ્લિકેશન.",
+
+        "project.webApp":
+          "વેબ એપ",
+
+
+        "contact.label":
+          "06 / સંપર્ક",
+
+        "contact.title":
+          "ચાલો કંઈક બનાવીએ.",
+
+        "contact.description":
+          "કોઈ વિચાર, પ્રોજેક્ટ અથવા પ્રશ્ન છે? સંપર્ક કરો.",
+
+        "contact.idea":
+          "કોઈ વિચાર છે?",
+
+        "contact.text":
+          "મને પ્રોજેક્ટ્સ બનાવવાનું અને નવા વિચારો શોધવાનું ગમે છે. જો તમે સંપર્ક કરવા માંગતા હો, તો ઈમેલ સંપર્ક કરવાનો શ્રેષ્ઠ રસ્તો છે.",
+
+        "contact.emailButton":
+          "ઈમેલ મોકલો",
+
+        "contact.emailLabel":
+          "ઈમેલ",
+
+        "contact.textLabel":
+          "ટેક્સ્ટ",
+
+        "contact.important":
+          "મહત્વપૂર્ણ",
+
+        "contact.noCall":
+          "કૃપા કરીને ફોન ન કરશો!",
+
+
+        "footer.text":
+          "· વિદ્યાર્થી · સર્જક · શીખનાર"
+
+      }
+
+    };
+
+
+    /* ------------------------------
+       LANGUAGE SWITCHING
+    ------------------------------ */
+
+    const languageButtons =
+      document.querySelectorAll(
+        ".language-button"
+      );
+
+    const translatedElements =
+      document.querySelectorAll(
+        "[data-i18n]"
+      );
+
+
+    function setLanguage(language) {
+
+      const dictionary =
+        translations[language];
+
+      translatedElements.forEach(
+        element => {
+
+          const key =
+            element.dataset.i18n;
+
+          if (dictionary[key]) {
+
+            element.textContent =
+              dictionary[key];
+
+          }
+
+        }
+      );
+
+
+      languageButtons.forEach(
+        button => {
+
+          button.classList.toggle(
+            "active",
+            button.dataset.language === language
+          );
+
+        }
+      );
+
+
+      document.documentElement.lang =
+        language === "gu"
+          ? "gu"
+          : "en";
+
+
+      localStorage.setItem(
+        "aadish-language",
+        language
+      );
+
+    }
+
+
+    languageButtons.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            setLanguage(
+              button.dataset.language
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+    /* ------------------------------
+       REMEMBER LANGUAGE
+    ------------------------------ */
+
+    const savedLanguage =
+      localStorage.getItem(
+        "aadish-language"
+      ) || "en";
+
+
+    setLanguage(savedLanguage);
 
 
     /* ------------------------------
@@ -2458,7 +3546,9 @@
 
             if (entry.isIntersecting) {
 
-              entry.target.classList.add("visible");
+              entry.target.classList.add(
+                "visible"
+              );
 
               revealObserver.unobserve(
                 entry.target
@@ -2485,7 +3575,7 @@
 
 
     /* ------------------------------
-       ACTIVE NAV
+       ACTIVE NAVIGATION
     ------------------------------ */
 
     const sections =
